@@ -13,10 +13,10 @@
     justify-content: center;
 }
 
-
 .wrapper {
     float: left;
     width: 90%;
+    position: relative;
 }
 
 .wrapper img {
@@ -33,9 +33,21 @@
     float: left;
     display: flex;
     align-items: center;
-
 }
 
 .fa-chevron-left, .fa-chevron-right {
     cursor: pointer;
+}
+
+.bullets {
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.bullets i.active {
+    color: white;
 }
