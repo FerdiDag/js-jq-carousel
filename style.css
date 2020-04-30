@@ -6,40 +6,33 @@
 
 .container {
     max-width: 1200px;
+    height: 100vh;
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.slider {
-    height: 100vh;
+
+.wrapper {
+    float: left;
     width: 90%;
-    display: flex;
-    align-items: center;
-
-
 }
 
-
-
-.carousel img {
-    max-width: 90%;
+.wrapper img {
+    max-width: 100%;
+    max-height: 100%;
     display: none;
-
 }
 
-.carousel img.active {
-    display:block;
+.wrapper img.active {
+    display: block;
 }
-
 
 .prev, .next {
+    float: left;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    height:50%;
-    width: 5%;
 
 }
 
