@@ -30,9 +30,11 @@
 }
 
 .prev, .next {
+    height: 50%;
     float: left;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .prev:hover {

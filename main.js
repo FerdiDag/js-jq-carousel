@@ -63,5 +63,6 @@ $('.fa-circle').click(function(){
 //col click seleziono un pallino e mi restituisce l'indice
     var currentIndex = $(this).index();
     console.log(currentIndex);
+    //devo associare l'indice all'immagine (?)
     //$("img:eq(currentIndex)");
 });
