@@ -15,7 +15,7 @@
 
 .wrapper {
     float: left;
-    width: 90%;
+    width: 100%;
     position: relative;
 }
 
@@ -35,18 +35,31 @@
     align-items: center;
 }
 
+.prev:hover {
+transform: scale(2,2);
+}
+ .next:hover {
+    transform: scale(2,2);
+}
+
+
 .fa-chevron-left, .fa-chevron-right {
     cursor: pointer;
 }
 
 .bullets {
-    padding: 10px;
     position: absolute;
     left: 50%;
     bottom: 10px;
     transform: translateX(-50%);
     text-align: center;
 }
+
+.bullets i {
+    padding: 0 15px;
+    cursor: pointer;
+}
+
 
 .bullets i.active {
     color: white;

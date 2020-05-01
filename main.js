@@ -4,8 +4,10 @@
 //funzione click su classe next
 $('.next').click(function() {
     //recupero l'img e il pallino che ha la classe active in questo momento  e la salvo in una variabile
+
     var imgCurrent = $('img.active');
     var currentBullet = $('i.active');
+
     //rimuovo la classe active all'immagine corrente e al pallino
     imgCurrent.removeClass('active');
     currentBullet.removeClass('active');
@@ -54,4 +56,12 @@ $('.prev').click(function() {
 
 
 
+});
+
+$('.fa-circle').click(function(){
+
+//col click seleziono un pallino e mi restituisce l'indice
+    var currentIndex = $(this).index();
+    console.log(currentIndex);
+    //$("img:eq(currentIndex)");
 });
