@@ -58,9 +58,28 @@ $('.prev').click(function() {
 
 });
 
-// $('.fa-circle').click(function(){
-//
-// //col click seleziono un pallino e mi restituisce l'indice
-//     var currentIndex = $(this).index();
+$('.fa-circle').click(function() {
 
-// });
+    //col click seleziono un pallino e mi restituisce l'indice
+    var currentIndex = $(this).index();
+    console.log(currentIndex);
+    var imgCurrent = $('img.active');
+    var pallinoCurrent = $('.fa-circle.active');
+    //associo le immagini agli indici
+    var associazione = $('img').eq(currentIndex);
+    console.log(associazione);
+    //associo il pallino all'indice
+    var pallino = $('.fa-circle').eq(currentIndex);
+    console.log(pallino);
+    // // // console.log(associazione);
+    //rimuovo le classi
+    imgCurrent.removeClass('active');
+    pallinoCurrent.removeClass('active');
+    // // // // $('i').removeClass('active');
+    //aggiungo le calssi active alle immagini e al pallino collegati agli indici
+    associazione.addClass('active');
+    pallino.addClass('active');
+    // // // pallino.addClass('active');
+    // // // $('i').addClass('active');
+    // //
+});
