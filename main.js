@@ -86,32 +86,36 @@ $('.fa-circle').click(function() {
 
 //start();
 
-//function start() {
+//function start()
 
-var clock = setInterval(function() {
-    var imgCurrent = $('img.active');
-    var currentBullet = $('i.active');
+var clock = 0;
 
-    //rimuovo la classe active all'immagine corrente e al pallino
-    imgCurrent.removeClass('active');
-    currentBullet.removeClass('active');
-    //recupero l'immagine succesiva e il pallino succ
-    var imgNext = imgCurrent.next('img');
-    var nextBullet = currentBullet.next('i');
-    //verifico che esista un0mmagine successiva eun pallino successivo
-    if (imgNext.length != 0) {
-        //se esiste metto la classe active
-        imgNext.addClass('active');
-        nextBullet.addClass('active');
-    } else {
-        //se non c'è riparto dall'inizio
-        imgNext = $('img:first-child');
-        nextBullet = $('i:first-child');
-        imgNext.addClass('active');
-        nextBullet.addClass('active');
-    }
-}, 3000);
+function start() {
+    clock = setInterval(function() {
+        var imgCurrent = $('img.active');
+        var currentBullet = $('i.active');
 
+        //rimuovo la classe active all'immagine corrente e al pallino
+        imgCurrent.removeClass('active');
+        currentBullet.removeClass('active');
+        //recupero l'immagine succesiva e il pallino succ
+        var imgNext = imgCurrent.next('img');
+        var nextBullet = currentBullet.next('i');
+        //verifico che esista un0mmagine successiva eun pallino successivo
+        if (imgNext.length != 0) {
+            //se esiste metto la classe active
+            imgNext.addClass('active');
+            nextBullet.addClass('active');
+        } else {
+            //se non c'è riparto dall'inizio
+            imgNext = $('img:first-child');
+            nextBullet = $('i:first-child');
+            imgNext.addClass('active');
+            nextBullet.addClass('active');
+        }
+    }, 3000);
+}
+start();
 
 
 
@@ -125,5 +129,5 @@ $('.pause').click(function() {
 });
 
 $('.play').click(function() {
-
+    start();
 });
